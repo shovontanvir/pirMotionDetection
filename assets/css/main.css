@@ -4,3 +4,43 @@ $font-1 : 'Galada', cursive !important;
 .color-red{
   color: rgb(255, 0, 0);
 }
+
+.background-greenish{
+  background-color: rgba(0, 255, 0, 0.4);
+}
+
+.background-blueish{
+  background-color: rgba(121, 121, 229, 0.5);
+}
+
+.radius-secondary{
+  border-radius: 15px;
+}
+
+.w-50{
+  width: 50%;
+}
+
+.w-25{
+  width: 25%;
+}
+
+.w-100{
+  width: 100vh;
+}
+
+.w-75{
+  width: 75%;
+}
+
+.background-code{
+  background-color: rgba(237, 166, 123, 0.5);
+}
+
+.border-right{
+  border-right: 1px solid;
+}
+
+.border-left{
+  border-left: 1px solid;
+}

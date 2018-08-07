@@ -2,35 +2,140 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>পি আই আর মোশন ডিটেক্টর</title>
+    <title>PIR Motion Detection</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Galada&amp;subset=bengali" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/prism/prism.css">
 
   </head>
   <body>
-    <section class="container py-5">
-      <div class="row">
+    <section class="container background-blueish radius-secondary py-5">
+      <div class="row py-5 px-4">
         <div class="col-12">
-        <h1 class="text-center">পি আই আর মোশন সেন্সর দিয়ে মোশন ডিটেকশন</h1>
+          <h1 class="text-center text-danger">
+            <u>পি আই আর মোশন সেন্সর দিয়ে মোশন ডিটেকশন</u>
+          </h1>
 
-        <p class="mt-5">আজ এই টিউটোরিয়ালে আমরা দেখব কিভাবে পি আই আর মোশন সেন্সর দিয়ে কোন বস্তু বা ব্যাক্তির মোশন বা সহজ ভাষায় নড়াচড়া ডিটেক্ট করা যায়, এবং এর ব্যাবহার কোথায় করা যেতে পারে তা জানব। আগেই বলে নিচ্ছি শুনতে যতই কঠিন মনে হোক না কেন এটি মাইক্রোকন্ট্রোলার দিয়ে করা অনেকগুলো সহজ প্রজেক্টের মধ্যে একটি। তুমি যদি মাইক্রোকন্ট্রোলার দিয়ে একটি এলইডি বাতি জ্বালাতে নিভাতে পার তাহলে এটাও তোমার কাছে কিছুই মনে হবে না।</p>
+          <p class="mt-5">আজ এই টিউটোরিয়ালে আমরা দেখব কিভাবে পি আই আর মোশন সেন্সর দিয়ে কোন বস্তু বা ব্যাক্তির মোশন বা সহজ ভাষায় নড়াচড়া ডিটেক্ট করা যায়, এবং এর ব্যাবহার কোথায় করা যেতে পারে তা জানব। আগেই বলে নিচ্ছি শুনতে যতই কঠিন মনে হোক না কেন এটি মাইক্রোকন্ট্রোলার দিয়ে করা অনেকগুলো সহজ প্রজেক্টের মধ্যে একটি। তুমি যদি মাইক্রোকন্ট্রোলার দিয়ে একটি এলইডি বাতি জ্বালাতে নিভাতে পার তাহলে এটাও তোমার কাছে কিছুই মনে হবে না।</p>
 
-        <h3 class="mt-4">পি আই আর (PIR) মোশন সেন্সর :</h3>
-        <p class="pl-4">এই মজার কিন্তু উপকারী প্রজেক্টটি শুরু করার আগে চল পি আই আর মোশন সেন্সর সম্পর্কে জেনে নেয়া যাক। পি আই আর (PIR) এর পুরো নাম হচ্ছে প্যাসিভ ইনফ্রারেড। ইনফ্রারেড নামটি শুনে পরিচিত মনে হচ্ছে? হতেই পারে। ইনফ্রারেড বা অবলোহিত হচ্ছে আলোর একটি রূপ যা আমরা খালি চোখে দেখতে পাই না। কাজেই বুঝতেই পারছ পি আই আর মোশন সেন্সর মূলত আলোর বৈশিষ্ট্য ব্যবহার করে মোশন ডিটেক্ট করে থাকে। তোমার কি মনে কেন একে প্যাসিভ ইনফ্রারেড বলা হয়? তার আগে জেনে নেই কিভাবে এটি কাজ করে। তাহলে বুঝতে পারবে কেন একটিভ না হয়ে প্যাসিভ ইনফ্রারেড বলা হয়ে থাকে।</p>
-        <p class="pl-4">পি আই আর সেন্সর কোন বস্তু অথবা প্রাণী দ্বারা বিকির্ন ইনফ্রারেড রশ্মি থেকে মোশন ডিটেক্ট করে থাকে। স্থির কোন বস্তু বা ব্যাকটি থেকে একটি নির্দিষ্ট পরিমাণ অবলোহিত আলো বের হয়। যখন ব্যাকটি বা বস্তুতই নড়া শুরু করে তখন এই অবলোহিত রশ্মিতে পরিবর্তন আসে। আর এই সামান্য পরিবর্তন কাজে লাগিয়ে পি আই আর সেন্সর কোন ব্যাকটি বা বস্তুর গতিবিধি নির্নয় করতে পারে। যেহেতু সেন্সরটি নিজে আলোর উৎস না বরং অন্য উৎস থেকে আসা আলো দিয়ে কাজ করে তাই একে প্যাসিভ বা পরোক্ষ বলা হয়ে থাকে।<p>
-        <p class="pl-4">বিঃদ্রঃ- পি আই আর সেন্সর সম্পর্কে আরও জানতে এই <a href="https://en.wikipedia.org/wiki/Passive_infrared_sensor" target="_blank">লিঙ্ক</a> টি ঘুরে আসতে পার।</p>
+          <h3 class="mt-4 text-danger">
+            <u>পি আই আর (PIR) মোশন সেন্সর :</u>
+          </h3>
+          <p class="pl-4">এই মজার কিন্তু উপকারী প্রজেক্টটি শুরু করার আগে চল পি আই আর মোশন সেন্সর সম্পর্কে জেনে নেয়া যাক। পি আই আর (PIR) এর পুরো নাম হচ্ছে প্যাসিভ ইনফ্রারেড। ইনফ্রারেড নামটি শুনে পরিচিত মনে হচ্ছে? হতেই পারে। ইনফ্রারেড বা অবলোহিত হচ্ছে আলোর একটি রূপ যা আমরা খালি চোখে দেখতে পাই না। কাজেই বুঝতেই পারছ পি আই আর মোশন সেন্সর মূলত আলোর বৈশিষ্ট্য ব্যবহার করে মোশন ডিটেক্ট করে থাকে। তোমার কি মনে কেন একে প্যাসিভ ইনফ্রারেড বলা হয়? তার আগে জেনে নেই কিভাবে এটি কাজ করে। তাহলে বুঝতে পারবে কেন একটিভ না হয়ে প্যাসিভ ইনফ্রারেড বলা হয়ে থাকে।</p>
+          <p class="pl-4">পি আই আর সেন্সর কোন বস্তু অথবা প্রাণী দ্বারা বিকির্ন ইনফ্রারেড রশ্মি থেকে মোশন ডিটেক্ট করে থাকে। স্থির কোন বস্তু বা ব্যাকটি থেকে একটি নির্দিষ্ট পরিমাণ অবলোহিত আলো বের হয়। যখন ব্যাকটি বা বস্তুতই নড়া শুরু করে তখন এই অবলোহিত রশ্মিতে পরিবর্তন আসে। আর এই সামান্য পরিবর্তন কাজে লাগিয়ে পি আই আর সেন্সর কোন ব্যাকটি বা বস্তুর গতিবিধি নির্নয় করতে পারে। যেহেতু সেন্সরটি নিজে আলোর উৎস না বরং অন্য উৎস থেকে আসা আলো দিয়ে কাজ করে তাই একে প্যাসিভ বা পরোক্ষ বলা হয়ে থাকে।<p>
+          <p class="p-1 d-block text-center background-greenish radius-secondary w-75 mx-auto">বিঃদ্রঃ- পি আই আর সেন্সর সম্পর্কে আরও জানতে এই <a href="https://en.wikipedia.org/wiki/Passive_infrared_sensor" target="_blank">লিঙ্ক</a> টি ঘুরে আসতে পার।</p>
 
-        <h3 class="mt-4">পি আই আর মোশন সেন্সর সম্পর্কে টেকনিকাল ডিস্ক্রিপশন</h3>
+          <div class="media my-4 align-items-center">
+            <img src="assets/images/PIRBack.png" alt="PIR sensor backside marked" class="radius-secondary w-25">
+            <div class="media-body pl-4">
+              <h3 class="text-danger">
+                <u>পি আই আর মোশন সেন্সর সম্পর্কে টেকনিকাল ডিস্ক্রিপশন:</u>
+              </h3>
+              <p>আমাদের এই সেন্সরটিতে মোট তিনটি পিন আছে; <code class="language-markup">VCC</code>, <code class="language-markup">GND</code> আর <code class="language-markup">Output</code>. অন্য সব ডিজিটাল ডিভাইসের মত এই সেন্সরের <code class="language-markup">VCC</code> আর <code class="language-markup">GND</code> পিন যথাক্রমে 5V(dc) এবং 0V এর সাথে কানেক্ট করা লাগবে। আর <code class="language-markup">Output</code> পিনটিকে মাইক্রোকন্ট্রোলারের যে পিনে আমরা রীড করতে চাই সে পিনে কানেক্ট করব। মনে রাখা লাগবে অন্য অনেক সেন্সরের মত আমাদের পি আই আর সেন্সর আয়নালগ আউটপুট দেয় না, ডিজিটাল (হাই/লো)আউটপুট দেয়। কাজেই এই প্রজেক্টে এডিসি পিনের কোন ব্যবহার নেই, যা আমাদের এই প্রজেক্টটিকে সহজ করে দেয়। এছাড়াও এই সেন্সরে রয়েছে দুইটি ভেরিএবল রেসিস্টর(পট) যেগুলোর মান পরিবর্তনের মাধ্যমে সেন্সরের সেন্সিটিভিটি এবং ডিলে এডজাস্ট করা যায়।</p>
+            </div>
+          </div>
+          <p class="p-1 d-block text-center background-greenish radius-secondary w-75 mx-auto">বিঃদ্রঃ- এই সেন্সরটির ইন্টার্নাল ডায়াগ্রাম জানতে এই <a href="https://techshopbd.com/uploads/product_document/HCSR501_pir_motion_sensor.pdf">PDF</a> টি দেখে নিতে পার।</p>
+          <h3 class="text-danger">
+            <u>এই প্রজেক্টের জন্যে প্রয়োজনীয় জিনিসপত্র:</u>
+          </h3>
+          <ul class="ml-4">
+            <li><a href="https://techshopbd.com/product-categories/motion/1336/hc-sr501-pir-sensor-module-techshop-bangladesh" target="_blank" class="text-dark">পি আই আর সেন্সর(PIR Sensor)</a></li>
+            <li><a href="https://techshopbd.com/product-categories/avr/637/atmega32a-techshop-bangladesh" target="_blank" class="text-dark">ATMega32 মাইক্রোকন্ট্রোলার</a></li>
+            <li><a href="https://techshopbd.com/product-categories/pic/78/pic16f877a-techshop-bangladesh" target="_blank" class="text-dark">PIC16F877A মাইক্রোকন্ট্রোলার</a></li>
+            <li><a href="https://techshopbd.com/product-categories/cable/1091/female-to-female-jumper-wire-single-techshop-bangladesh" target="_blank" class="text-dark">ফিমেল টু ফিমেল কানেক্টিং জাম্পার</a></li>
+            <li><a href="https://techshopbd.com/product-categories/project-board/231/breadboard-techshop-bangladesh" target="_blank" class="text-dark">ব্রেডবোর্ড</a></li>
+            <li><a href="https://techshopbd.com/product-categories/connector/549/male-connector-single-row-techshop-bangladesh" target="_blank" class="text-dark">মেল কানেক্টর</a></li>
+            <li><a href="https://techshopbd.com/product-categories/avr-98776/2396/avr-mini-development-board-techshop-bangladesh" target="_blank" class="text-dark">AVR ডাউনলোডার</a></li>
+            <li><a href="https://techshopbd.com/product-categories/pic-98777/1784/pic-mini-development-board-techshop-bangladesh" target="_blank" class="text-dark">PIC ডাউনলোডার</a></li>
+            <li><a href="https://techshopbd.com/product-categories/led/295/led-white-5mm-techshop-bangladesh" target="_blank" class="text-dark">LED লাইট</a></li>
+            <li><a href="https://techshopbd.com/product-categories/buzzers/177/buzzer-techshop-bangladesh" target="_blank" class="text-dark">বাজার</a></li>
+            <li><a href="" target="_blank" class="text-dark">রেসিস্টর</a></li>
+            <li><a href="https://techshopbd.com/product-categories/crystal-oscillator/191/20-mhz-crystal-oscillator-techshop-bangladesh" target="_blank" class="text-dark">20MHz ক্রিস্টাল ওসিলেটর</a></li>
+            <li><a href="https://techshopbd.com/product-categories/capacitor/383/ceramic-capacitor-150-15pf-techshop-bangladesh" target="_blank" class="text-dark">15pF ক্যাপাসিটর</a></li>
+          </ul>
+          <h3 class="text-danger">
+            <u>প্রয়োজনীয় কোডঃ</u>
+          </h3>
+          <div class="px-3">
+            <div class="row background-code py-4 px-3 text-center radius-secondary">
+              <div class="col-6 border-right">
+                <h4 class="text-info">AVR Code</h4>
+                <pre class="mt-4 radius-secondary">
+                  <code class="language-markup">
+#include< avr/io.h >
+#define F_CPU 8000000
+#include< util/delay.h >
+int main()
+{
+	DDRA=0x00; //configuring PORTA pin 0 as input
+	PORTA=0x00;
+	DDRB=0x08; // configuring PortB as output
+	PORTB=0x00; // buzzer/LED off
 
+	_delay_ms(10000);  //setting 10 seconds delay for sensor initialization
 
+  while(1) {         //infinite loop
+    if((PORTA & (1 << 0)) == 1) {    //condition for sensor output
+       PORTB = 0xff;      //setting PORTB value to 1, buzzer and LED on
+       Delay_ms(5000);    //buzzer and LED on for 5 seconds
+       PORTB = 0x00;      //PORTB again 0, buzzer and LED off
+     }
+     else {
+       PORTB = 0x00;     //buzzer and LED off
+     }
+}
+
+                  </code>
+                </pre>
+              </div>
+              <div class="col-6 border-left">
+                <h4 class="text-info">PIC Code</h4>
+                <pre class="mt-4 radius-secondary">
+                  <code class="language-markup">
+void main() {
+  TRISB = 0xff;    //declaring PORTB as sensor input
+  PORTB = 0x00;    //asigning value 0 to PORTB
+  TRISC = 0x00;    //declaring PORTC as sensor output
+  PORTC = 0x00;    //asigning value 0 to PORTC, buzzer and LED off
+
+  Delay_ms(10000);  //setting 10 seconds delay for sensor initialization
+
+  while(1) {         //infinite loop
+    if((PORTB & (1 << 0)) == 1) {    //condition for sensor output
+       PORTC = 0xff;      //setting PORTC value to 1, buzzer and LED on
+       Delay_ms(5000);    //buzzer and LED on for 5 seconds
+       PORTC = 0x00;      //PORTC again 0, buzzer and LED off
+     }
+     else {
+       PORTC = 0x00;     //buzzer and LED off
+     }
+   }
+ }
+                  </code>
+                </pre>
+              </div>
+            </div>
+            <p class="p-1 my-3 d-block text-center background-greenish radius-secondary w-75 mx-auto">বিঃদ্রঃ- এই কোড গুলো নিজের মত করে নিতে পার। শুধু হার্ডওয়ার এ কানেকশন ঠিক মত দিলেই হবে।</p>
+          </div>
+          <h3 class="text-danger">
+            <u>পি আই আর মোশন সেন্সরের ব্যবহার:</u>
+          </h3>
+          <ul class="ml-4">
+            <li>হোম অটোমেশন</li>
+            <li>হোম সিকিউরিটি</li>
+            <li>ইন্ডাস্ট্রিয়াল অটোমেশন</li>
+            <li>অটোমেটিক ডোর ওপেনিং এন্ড ক্লোজিং</li>
+            <li>অটোমেটিক টিকেট গেট</li>
+          </ul>
+          <p>এবং আরও অনেক।</p>
         </div>
       </div>
     </section>
 
 
 
-    <script type="text/javascript" src="assets/js/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/prism/prism.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
