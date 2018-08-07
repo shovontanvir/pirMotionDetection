@@ -1,0 +1,6 @@
+/* fonts */
+$font-1 : 'Galada', cursive !important;
+
+.color-red{
+  color: rgb(255, 0, 0);
+}
